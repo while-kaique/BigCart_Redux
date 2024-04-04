@@ -1,26 +1,48 @@
 import '../components/Footer.css'
 const Footer = () => {
   return (
-    <footer className='footer'>
-        <ul>
-            <h1>Sobre Nós</h1>
-            <li>Quem Somos?</li>
-            <li>Política de Privacidade</li>
-            <li>Termos de Serviço</li>
-            <li>Contatos</li>
-        </ul>
-        
-        <div id="logo"></div>
-        
-        <ul>
-            <h1>Links Úteis</h1>
-            <li>Github</li>
-            <li>LinkedIn</li>
-            <li>Indeed</li>
-            <li>Email</li>
-            <li>Whatsapp</li>
-        </ul>
-    </footer>
+    <div className='foot'>
+        <footer className='footer'>
+            <ul>
+                <h1>Sobre Nós</h1>
+                <a href="#">
+                    <li>Quem Somos?</li>
+                </a>
+                <a href="#">
+                    <li>Política de Privacidade</li>
+                </a>
+                <a href="#">
+                    <li>Termos de Serviço</li>
+                </a>
+                <a href="">
+                    <li>Contatos</li>
+                </a>
+            </ul>
+            
+            <div id='e'>
+                <div id="logo"></div>
+            </div>
+            
+            <ul>
+                <h1>Links Úteis</h1>
+                <a href="https://github.com/while-kaique">
+                    <li>Github</li>
+                </a>
+                <a href="https://www.linkedin.com/in/kaique-breno/">
+                    <li>LinkedIn</li>
+                </a>
+                <a href="whilekaique@alu.ufc.br">
+                    <li>Email</li>
+                </a>
+                <a href="https://w.app/KaiCode">
+                    <li>Whatsapp</li>
+                </a>
+            </ul>
+        </footer>
+        <a href="https://w.app/KaiCode">
+            <p>Este site lhe gerou interesse? Entre em contato usando uma das formas descritas acima!</p>
+        </a>
+    </div>
   )
 }
 
