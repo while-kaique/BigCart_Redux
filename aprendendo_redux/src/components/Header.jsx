@@ -1,33 +1,33 @@
-
 import { useState } from 'react'
+
 import './Header.css'
 
 const Header = () => {
 
-    const [bar, setBar] = useState('initial')
+    const [hamburguer, setHamburguer] = useState('close')
     const [menu, setMenu] = useState('close')
 
-    const toggleAnimationBar = () => {
-        if (bar ==='open'){
-            setBar('close')
-            setMenu('close')
+    function toggleMenu(){
+        if (hamburguer === 'close'){
+            setHamburguer('open')
+            setMenu('open')
             return
         }
-        setBar('open')
-        setMenu('open')
+        setHamburguer('close')
+        setMenu('close')
     }
-
 
 
   return (
     <>
         <header>
             <div className="navbar">
-                <div className="logo"><a href="/"></a></div>
-                <div className="hamburguer" onClick={toggleAnimationBar}>
-                    <div className={`bar1 ${bar}`}></div>
-                    <div className={`bar2 ${bar}`}></div>
+                <div className="logo"><a href="/"></a></div>  
+                <div className={`hamburguer ${hamburguer}`} onClick={toggleMenu}>
+                    <div className={`bar1`}></div>
+                    <div className={`bar2`}></div>
                 </div>
+                
             </div>
 
             

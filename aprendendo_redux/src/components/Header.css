@@ -37,6 +37,8 @@
 }
 
 header {
+    position: absolute;
+    top: 0;
     width: 100vw;
     padding: 30px 10px;
     
@@ -56,6 +58,7 @@ div.navbar {
     justify-content: space-between;
 
     max-width: 1200px;
+    max-height: 50px;
     margin: 0 auto;
 }
 
@@ -63,11 +66,14 @@ div.logo {
     background-image: url('/images/logo.png') ;
     background-position: center center;
     background-size: cover;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
 }
 
 div.hamburguer {
+    position: relative;
+    right: -45px;
+    top: 90px;
     display: flex;
     flex-direction: column;
 
@@ -75,8 +81,9 @@ div.hamburguer {
 
     width: 50px;
     height: 50px;
+    padding: 0px 50px 180px 50px;
 
-    z-index: 999;
+    z-index: 997;
     
 
 }
@@ -118,7 +125,7 @@ ul.menu.close {
     position: fixed;
     text-align: center;
     top: 100px;
-    right: -150px;
+    right: -170px;
 
     list-style-type: none;
     background-color: #2391c8;
@@ -126,7 +133,7 @@ ul.menu.close {
     border-radius: 5px;
     border-top: 0px;
 
-    width: 150px;
+    width: 165px;
     height: 25vh;
 
 
@@ -139,45 +146,42 @@ ul.menu.open{
     right: 0px;
 
     list-style-type: none;
-    background-color: #2391c8;
-    border: 2px solid rgba(0, 0, 0, 0.123);
+    background-color: #ffffff;
+    border: 2px solid #2391c8;
     border-radius: 5px;
     border-top: 0px;
 
-    width: 150px;
+    width: 165px;
     height: 25vh;
-    transition: .5s;
+    transition: .3s;
+
+    z-index: 999;
 }
 
 ul.menu li{
+    border-top: 2px solid #2391c8;
     padding: 10px;
 }
 ul.menu li:hover{
-    background-color: #1b73a0;
+    background-color: #126e9c;
     transition: .3s;
 }
 
 ul.menu a {
-    color: #fff;
+    color: #2391c8;
     text-decoration: none;
 
 }
 
-.bar1.initial{
-    animation: bar1back 0s forwards;
+.hamburguer.close .bar1{
+    animation: bar1back .3s forwards;
 }
-.bar2.initial{
-    animation: bar2back 0s forwards;
+.hamburguer.close .bar2{
+    animation: bar2back .3s forwards;
 }
-.bar1.close{
-    animation: bar1back .5s forwards;
+.hamburguer.open .bar1{
+    animation: bar1go .3s forwards;
 }
-.bar2.close{
-    animation: bar2back .5s forwards;
-}
-.bar1.open{
-    animation: bar1go .5s forwards;
-}
-.bar2.open{
-    animation: bar2go .5s forwards;
+.hamburguer.open .bar2{
+    animation: bar2go .3s forwards;
 }

@@ -1,7 +1,15 @@
 
+import './Home.css'
+import Card from '../components/Card.jsx'
+
 const Home = () => {
   return (
-    <div>Home</div>
+    <>
+    <main>
+      <h1>Destaques da Semana</h1>
+      <Card />
+    </main>
+    </>
   )
 }
 
