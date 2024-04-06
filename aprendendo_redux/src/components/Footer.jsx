@@ -3,7 +3,7 @@ const Footer = () => {
   return (
     <div className='foot'>
         <footer className='footer'>
-            <ul>
+            <ul id="ul1">
                 <h1>Sobre Nós</h1>
                 <a href="#">
                     <li>Quem Somos?</li>
@@ -14,7 +14,7 @@ const Footer = () => {
                 <a href="#">
                     <li>Termos de Serviço</li>
                 </a>
-                <a href="">
+                <a href="#">
                     <li>Contatos</li>
                 </a>
             </ul>
@@ -23,7 +23,7 @@ const Footer = () => {
                 <div id="logo"></div>
             </div>
             
-            <ul>
+            <ul id="ul2">
                 <h1>Links Úteis</h1>
                 <a href="https://github.com/while-kaique">
                     <li>Github</li>

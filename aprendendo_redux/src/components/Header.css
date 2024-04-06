@@ -1,0 +1,183 @@
+@keyframes bar1back {
+    0% {
+        transform: translate(0px, -50%) rotate(45deg);
+    }
+    100%{
+        transform: translate(0px, -50%) rotate(0);
+        top: 18px;
+    }
+}
+@keyframes bar2back {
+    0% {
+        transform: translate(0px, calc(-50% - 6px)) rotate(-45deg);
+    }
+    100%{
+        transform: translate(0px, calc(-50% - 6px)) rotate(0);
+        top: 32px;
+    }
+}
+
+@keyframes bar1go {
+    0%{
+        transform: translate(0px, -50%) rotate(0);
+        top: 18px;
+    }
+    100%{
+        transform: translate(0px, -50%) rotate(45deg);
+    }
+}
+@keyframes bar2go {
+    0%{
+        transform: translate(0px, calc(-50% - 6px)) rotate(0);
+        top: 32px;
+    }
+    100%{
+        transform: translate(0px, calc(-50% - 6px)) rotate(-45deg);
+    }
+}
+
+header {
+    width: 100vw;
+    padding: 30px 10px;
+    
+    background-color: #2391c8;
+
+    position: fixed;
+
+    z-index: 999;
+}
+header h1 span{
+    font-size: 1rem;
+}
+
+div.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+div.logo {
+    background-image: url('/images/logo.png') ;
+    background-position: center center;
+    background-size: cover;
+    width: 70px;
+    height: 70px;
+}
+
+div.hamburguer {
+    display: flex;
+    flex-direction: column;
+
+    cursor: pointer;
+
+    width: 50px;
+    height: 50px;
+
+    z-index: 999;
+    
+
+}
+.hamburguer .bar1{
+    position: relative;
+    border-radius: 15px;
+    top: 25px;
+    
+    width: 50px;
+    height: 6px;
+
+    background-color: #ffffff;
+
+    z-index: 990;
+    
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.233);
+}
+
+.hamburguer .bar2{
+    position: relative;
+    top: 25px;
+    
+    width: 50px;
+    height: 6px;
+    border-radius: 15px;
+
+    z-index: 991;
+
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.233);
+
+    background-color: #ffffff;
+}
+
+.hamburguer:hover *{
+    background-color: #e9e9e9;
+}
+
+ul.menu.close {
+    position: fixed;
+    text-align: center;
+    top: 100px;
+    right: -150px;
+
+    list-style-type: none;
+    background-color: #2391c8;
+    border: 2px solid rgba(0, 0, 0, 0.123);
+    border-radius: 5px;
+    border-top: 0px;
+
+    width: 150px;
+    height: 25vh;
+
+
+    transition: .5s;
+}
+ul.menu.open{
+    position: fixed;
+    text-align: center;
+    top: 100px;
+    right: 0px;
+
+    list-style-type: none;
+    background-color: #2391c8;
+    border: 2px solid rgba(0, 0, 0, 0.123);
+    border-radius: 5px;
+    border-top: 0px;
+
+    width: 150px;
+    height: 25vh;
+    transition: .5s;
+}
+
+ul.menu li{
+    padding: 10px;
+}
+ul.menu li:hover{
+    background-color: #1b73a0;
+    transition: .3s;
+}
+
+ul.menu a {
+    color: #fff;
+    text-decoration: none;
+
+}
+
+.bar1.initial{
+    animation: bar1back 0s forwards;
+}
+.bar2.initial{
+    animation: bar2back 0s forwards;
+}
+.bar1.close{
+    animation: bar1back .5s forwards;
+}
+.bar2.close{
+    animation: bar2back .5s forwards;
+}
+.bar1.open{
+    animation: bar1go .5s forwards;
+}
+.bar2.open{
+    animation: bar2go .5s forwards;
+}
