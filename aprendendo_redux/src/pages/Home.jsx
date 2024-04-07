@@ -1,12 +1,11 @@
 
 import './Home.css'
-import Card from '../components/Card.jsx'
+import Card from '../components/Card'
 
 const Home = () => {
   return (
     <>
     <main>
-      <h1>Destaques da Semana</h1>
       <Card />
     </main>
     </>
