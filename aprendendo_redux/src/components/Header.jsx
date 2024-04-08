@@ -1,6 +1,8 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 import './Header.css'
+
 
 const Header = () => {
 
@@ -32,11 +34,23 @@ const Header = () => {
 
             
             <ul className={`menu ${menu}`}>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">Produtos</a></li>
-                    <li><a href="#">Carrinho</a></li>
-                    <li><a href="#">Contatos</a></li>
-                </ul>
+                    <Link to={'/'}>
+                        <li>Home</li>
+                        <div className="line"></div>
+                    </Link>
+                    <Link to={'/'}>
+                        <li>Produtos</li>
+                        <div className="line"></div>
+                    </Link>
+                    <Link to={'/'}>
+                        <li>Carrinho</li>
+                        <div className="line"></div>
+                    </Link>
+                    <Link to={'/'}>
+                        <li>Contatos</li>
+                        <div className="line last"></div>
+                    </Link>
+            </ul>
         </header>
         
     </>

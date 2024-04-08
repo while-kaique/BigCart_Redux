@@ -1,14 +1,31 @@
 
 import './Card.css'
 
-const Card = () => {
+const Card = ( {name, imgURL} ) => {
   return (
-    <div className="card">
-      <img src="#" alt="eae" />
-      <title>Título</title>
-      <p>R$14,99</p>
-      <button>Adicionar ao Carrinho</button>
-    </div>
+    
+    <>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+      <div className="card">
+        <div className="image">
+          <img src="/images/camisa.png" alt="nãosei" />
+        </div>
+        <section>
+          <div className="info">
+            <h1>Nome</h1>
+              <div className="stars">
+              <span className="star material-symbols-outlined">star</span>
+              <span className="star material-symbols-outlined">star</span>
+              <span className="star material-symbols-outlined">star</span>
+              <span className="star material-symbols-outlined">star</span>
+              <span className="star material-symbols-outlined">star</span>
+            </div>
+          </div>
+          <button>Comprar</button>
+        </section>
+      </div>
+    </>
   )
 }
 

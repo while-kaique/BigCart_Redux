@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import CreateAccount from '../src/pages/CreateAccount.jsx'
-import Home from '../src/pages/Home.jsx'
+import Products from '../src/pages/Products.jsx'
 import Product from '../src/pages/Product.jsx'
 
 import './index.css'
@@ -13,7 +13,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <Routes>
         <Route element={<App/>}>
-          <Route path="/" element={<Home />}/>
+          <Route path="/" element={<Products />}/>
           <Route path="/product/:id" element={<Product />}/>
           <Route path="/register" element={<CreateAccount />}/>
         </Route>

@@ -1,4 +1,6 @@
 main {
+    display: flex;
+    flex-wrap: wrap;
     color: black;
     padding-top: 110px;
 }
