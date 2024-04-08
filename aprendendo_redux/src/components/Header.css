@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 @keyframes bar1back {
     0% {
         transform: translate(0px, -50%) rotate(45deg);
@@ -69,10 +71,48 @@ div.logo {
     height: 50px;
 }
 
+div.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.cart{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 50px;
+    margin-right: 50px;
+}
+
+div.cart span.cart{
+    color: white;
+    font-size: 2.8rem;
+    padding-top: .4rem;
+
+    height: 100%;
+}
+div.cart:hover{
+    cursor: pointer;
+}
+
+div.cart div.count{
+    font-family: 'Inter';
+    text-align: center;
+    background-color: white;
+    width: 30px;
+    border-radius: 10px;
+    font-weight: 500;
+    margin-bottom: 7px;
+}
+div.cart p{
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: .8rem;
+    color: white;
+}
 div.hamburguer {
     position: relative;
-    right: -45px;
-    top: 90px;
     display: flex;
     flex-direction: column;
 
@@ -80,7 +120,6 @@ div.hamburguer {
 
     width: 50px;
     height: 50px;
-    padding: 0px 50px 180px 50px;
 
     z-index: 997;
     
@@ -98,7 +137,6 @@ div.hamburguer {
 
     z-index: 990;
     
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.233);
 }
 
 .hamburguer .bar2{
@@ -111,7 +149,6 @@ div.hamburguer {
 
     z-index: 991;
 
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.233);
 
     background-color: #ffffff;
 }
@@ -155,6 +192,8 @@ ul.menu.open{
 }
 
 ul.menu li{
+    font-family: 'Inter';
+    font-weight: 450;
     padding: 10px;
 }
 ul.menu div.line:not(div.line.last){

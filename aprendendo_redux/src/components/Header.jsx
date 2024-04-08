@@ -19,15 +19,29 @@ const Header = () => {
         setMenu('close')
     }
 
+    function toggleCart(){
+        alert('Clicou Carrinho!')
+    }
+
 
   return (
+    
     <>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
         <header>
             <div className="navbar">
                 <div className="logo"><a href="/"></a></div>  
-                <div className={`hamburguer ${hamburguer}`} onClick={toggleMenu}>
-                    <div className={`bar1`}></div>
-                    <div className={`bar2`}></div>
+                <div className="info">
+                    <div className="cart" onClick={toggleCart}>
+                        <span className="cart material-symbols-outlined">shopping_cart</span>
+                        <div className="count">0</div>
+                        <p>Carrinho</p>
+                    </div>
+                    <div className={`hamburguer ${hamburguer}`} onClick={toggleMenu}>
+                        <div className={`bar1`}></div>
+                        <div className={`bar2`}></div>
+                    </div>
                 </div>
                 
             </div>
