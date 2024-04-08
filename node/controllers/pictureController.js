@@ -5,12 +5,12 @@ exports.create = async (req, res) => {
 
         const {name} = req.body
 
-        const file = req.file
+        const file = req.file.filename
         console.log(file.path)
 
         const picture = new Picture({
             name,
-            src: file.path,
+            src: file,
         })
 
         await picture.save()

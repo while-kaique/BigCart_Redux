@@ -1,8 +1,9 @@
 
+import PropTypes from 'prop-types';
 
 import './Card.css'
 
-const Card = ( name, src ) => {
+const Card =  ({ name,src }) => {
 
   return (
     
@@ -11,7 +12,7 @@ const Card = ( name, src ) => {
 
       <div className="card">
         <div className="image">
-          <img src={src} alt="nãosei" />
+          <img src={`http://localhost:3000/files/`+src} alt="nãosei" />
         </div>
         <section>
           <div className="info">
@@ -30,5 +31,10 @@ const Card = ( name, src ) => {
     </>
   )
 }
+
+Card.propTypes = {
+  name: PropTypes.string.isRequired,
+  src: PropTypes.string.isRequired
+};
 
 export default Card

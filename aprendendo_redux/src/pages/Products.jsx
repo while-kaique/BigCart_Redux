@@ -1,27 +1,30 @@
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 import './Products.css'
 import Card from '../components/Card'
 
 const Products = () => {
 
-  const picturesArray = useEffect(()=>{
-    fetch("http://localhost:3000/pictures", {
-      method: 'GET',
-      headers: {
-        'Content-Type:': 'image/png'
-      }
-    })
-    .then(resp => resp.json())
-    .catch()
-  }, [])
+  const [uploads, setUploads] = useState([])
 
+  useEffect(()=>{
+    fetch("http://localhost:3000/pictures", {
+      method: 'GET'
+    })
+    .then((res) => {
+      console.log('passou aqui')
+      return res.json()
+    })
+    .then(data => setUploads(data))
+    .catch(err => console.log(err))
+  }, [])
   return (
     <>
     <main>
-      {picturesArray.map((elemento)=>{
-        <Card name={elemento.name} src={elemento.src} />
+      {uploads.map((element, index)=>{
+        const {name, src} = element
+        return <Card name={name} src={src} key={index}/>
       })}
     </main>
     </>
