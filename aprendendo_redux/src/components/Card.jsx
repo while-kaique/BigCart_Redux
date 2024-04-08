@@ -1,7 +1,7 @@
 
 import './Card.css'
 
-const Card = ( {name, imgURL} ) => {
+const Card = ( {name, src} ) => {
   return (
     
     <>

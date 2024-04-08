@@ -6,6 +6,7 @@ exports.create = async (req, res) => {
         const {name} = req.body
 
         const file = req.file
+        console.log(file.path)
 
         const picture = new Picture({
             name,
@@ -17,6 +18,16 @@ exports.create = async (req, res) => {
         res.json({picture, msg:"Imagem salva com sucesso"})
         
     } catch (error) {
-        res.status(500).json({message: "Erro ao salvar imagem"})
+        res.status(500).json({message: "Erro ao salvar imagem" + error})
+    }
+}
+
+exports.findAll = async (req, res)=>{
+    try {
+        const pictures = await Picture.find()
+
+        res.json(pictures)
+    } catch (err) {
+        res.status(500).json({message: "Erro ao buscar imagens."})
     }
 }
