@@ -45,13 +45,13 @@ section .info{
 
 /* INFORMATION */
 
-.info h1{
+section#card .info h1{
     font-size: 1rem;
     text-transform: uppercase;
     color: rgb(58, 58, 58);
     font-family: 'Inter';
 }
-.info span.star{
+section#card .info span.star{
     font-size: .8rem;
     color: rgb(255, 196, 0);
 }

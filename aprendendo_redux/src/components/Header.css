@@ -77,6 +77,16 @@ div.info {
     justify-content: center;
     align-items: center;
 }
+.info h1{
+    font-size: 1.5em;
+    margin-right: 70px;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+}
+.info h1:hover{
+    color: #e9e9e9;
+}
 
 div.cart{
     display: flex;
@@ -232,7 +242,19 @@ ul.menu li:hover{
     animation: bar2go .3s forwards;
 }
 
-section.cartP{
+.cartMenu.open{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 69vw;
+    height: 100vh;
+    background-color: #131313a2;
+}
+.cartMenu.close{
+    background-color: transparent;
+}
+
+div.cartP.open{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -251,7 +273,10 @@ section.cartP{
 
     background-color: white;
 }
-section.cartP h1{
+div.cartP.close{
+    display: none;
+}
+div.cartP h1{
     padding: 15px;
     padding-bottom: 50px;
     font-family: 'Inter';

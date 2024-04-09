@@ -9,15 +9,16 @@ const Products = () => {
   const [uploads, setUploads] = useState([])
 
   useEffect(()=>{
-    fetch("http://localhost:3000/pictures", {
-      method: 'GET'
-    })
-    .then((res) => {
-      console.log('passou aqui')
-      return res.json()
-    })
-    .then(data => setUploads(data))
-    .catch(err => console.log(err))
+    setTimeout(() => {
+      fetch("http://localhost:3000/pictures", {
+        method: 'GET'
+      })
+      .then((res) => {
+        return res.json()
+      })
+      .then(data => setUploads(data))
+      .catch(err => console.log(err))
+    }, 3000);
   }, [])
   return (
     <>
@@ -25,10 +26,10 @@ const Products = () => {
     <main>
       <h1 id='title'>Todos os Produtos</h1>
       <section>
-        {uploads.map((element, index)=>{
+        {(uploads.length >= 1) ? uploads.map((element, index)=>{
           const {name, src} = element
           return <Card name={name} src={src} key={index}/>
-        })}
+        }) : <div className='circle'></div>}
       </section>
     </main>
     </>

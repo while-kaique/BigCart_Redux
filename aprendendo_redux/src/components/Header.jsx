@@ -10,6 +10,9 @@ const Header = () => {
     const [hamburguer, setHamburguer] = useState('close')
     const [menu, setMenu] = useState('close')
 
+    const [cart, setCart] = useState('close')
+    const [cartMenu, setCartMenu] = useState('close')
+
     function toggleMenu(){
         if (hamburguer === 'close'){
             setHamburguer('open')
@@ -20,11 +23,19 @@ const Header = () => {
         setMenu('close')
     }
 
-    function toggleCart(){
+    function openCart(){
         setHamburguer('close')
         setMenu('close')
+        setCartMenu('open')
+        setCart('open')
+    }
 
-        
+    function toggleCart(){
+        if (cartMenu === 'open'){
+            setCartMenu('close')
+            setCart('close')
+            return
+        }
     }
 
 
@@ -37,7 +48,8 @@ const Header = () => {
             <div className="navbar">
                 <div className="logo"><a href="/"></a></div>  
                 <div className="info">
-                    <div className="cart" onClick={toggleCart}>
+                    <h1>Login</h1>
+                    <div className="cart" onClick={openCart}>
                         <span className="cart material-symbols-outlined">shopping_cart</span>
                         <div className="count">0</div>
                         <p>Carrinho</p>
@@ -69,9 +81,12 @@ const Header = () => {
                         <div className="line last"></div>
                     </Link>
             </ul>
-            <section className={'cartP'}>
-                <h1>Seu Carrinho</h1>
-                <Product />
+            <section>
+                <div className={`cartMenu ${cartMenu}`}  onClick={toggleCart}></div>
+                <div className={`cartP ${cart}`}>
+                    <h1>Seu Carrinho</h1>
+                    <Product />
+                </div>
             </section>
         </header>
         

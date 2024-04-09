@@ -11,9 +11,11 @@ import store from './redux/store.js'
 function App() {
   return (
     <>
-      <Header />
-        <Outlet />
-      <Footer /> 
+      <Provider store={store}>
+        <Header />
+          <Outlet />
+        <Footer />
+      </Provider>
     </>
   )
 }

@@ -14,7 +14,7 @@ const Card =  ({ name,src }) => {
         <div className="image">
           <img src={`http://localhost:3000/files/`+src} alt="nãosei" />
         </div>
-        <section>
+        <section id='card'>
           <div className="info">
             <h1>{name}</h1>
               <div className="stars">
