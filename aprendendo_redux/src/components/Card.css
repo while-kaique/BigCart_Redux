@@ -63,13 +63,13 @@ section button{
     border-radius: 5px;
     border: 0;
 
-    background-color: #b81515;
+    background-color: #b81515d8;
     color: white;
-    transition: .2s;
+    transition: .1s;
 }
 
 section button:hover{
     cursor: pointer;
     background-color: #ee3838;
-    transition: .2s;
+    transition: .1s;
 }

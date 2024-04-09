@@ -48,7 +48,7 @@ const Header = () => {
             <div className="navbar">
                 <div className="logo"><a href="/"></a></div>  
                 <div className="info">
-                    <h1>Login</h1>
+                    <h1 id='login'>Login</h1>
                     <div className="cart" onClick={openCart}>
                         <span className="cart material-symbols-outlined">shopping_cart</span>
                         <div className="count">0</div>
