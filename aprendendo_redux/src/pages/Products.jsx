@@ -21,11 +21,15 @@ const Products = () => {
   }, [])
   return (
     <>
+    
     <main>
-      {uploads.map((element, index)=>{
-        const {name, src} = element
-        return <Card name={name} src={src} key={index}/>
-      })}
+      <h1 id='title'>Todos os Produtos</h1>
+      <section>
+        {uploads.map((element, index)=>{
+          const {name, src} = element
+          return <Card name={name} src={src} key={index}/>
+        })}
+      </section>
     </main>
     </>
   )

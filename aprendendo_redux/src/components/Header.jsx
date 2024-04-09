@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import './Header.css'
+import Product from '../components/Product.jsx'
 
 
 const Header = () => {
@@ -20,7 +21,10 @@ const Header = () => {
     }
 
     function toggleCart(){
-        alert('Clicou Carrinho!')
+        setHamburguer('close')
+        setMenu('close')
+
+        
     }
 
 
@@ -65,6 +69,10 @@ const Header = () => {
                         <div className="line last"></div>
                     </Link>
             </ul>
+            <section className={'cartP'}>
+                <h1>Seu Carrinho</h1>
+                <Product />
+            </section>
         </header>
         
     </>

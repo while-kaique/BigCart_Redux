@@ -1,7 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
+
+import App from './App.jsx'
+
 import CreateAccount from '../src/pages/CreateAccount.jsx'
 import Products from '../src/pages/Products.jsx'
 import Product from '../src/pages/Product.jsx'

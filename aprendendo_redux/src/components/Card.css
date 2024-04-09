@@ -36,6 +36,7 @@ section {
 }
 
 section .info{
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,12 +63,13 @@ section button{
     border-radius: 5px;
     border: 0;
 
-    background-color: #2391c8;
+    background-color: #b81515;
     color: white;
+    transition: .2s;
 }
 
 section button:hover{
     cursor: pointer;
-    background-color: #60b7e2;
+    background-color: #ee3838;
     transition: .2s;
 }
