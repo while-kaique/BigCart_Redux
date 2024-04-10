@@ -1,7 +1,7 @@
 import {combineReducers} from 'redux'
 
-import themeReducer from './theme/reducer'
+import userReducer from './user/reducer'
 
-const rootReducer = combineReducers({themeReducer})
+const rootReducer = combineReducers({userReducer})
 
 export default rootReducer

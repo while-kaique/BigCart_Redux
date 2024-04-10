@@ -1,17 +1,21 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
 
 import './Header.css'
 import Product from '../components/Product.jsx'
+import UserActionTypes from '../redux/user/action-types.js'
 
 
 const Header = () => {
-
     const [hamburguer, setHamburguer] = useState('close')
     const [menu, setMenu] = useState('close')
 
     const [cart, setCart] = useState('close')
     const [cartMenu, setCartMenu] = useState('close')
+
+    const {currentUser} = useSelector(rootReducer => rootReducer.userReducer)
+    const dispatch = useDispatch()
 
     function toggleMenu(){
         if (hamburguer === 'close'){
@@ -38,6 +42,18 @@ const Header = () => {
         }
     }
 
+    function handleLoginClick(){
+        if (currentUser === null){
+            dispatch({
+                type:UserActionTypes.LOGIN
+            })
+            return
+        }
+        dispatch({
+            type:UserActionTypes.LOGOUT
+        })
+    }
+
 
   return (
     
@@ -48,7 +64,7 @@ const Header = () => {
             <div className="navbar">
                 <div className="logo"><a href="/"></a></div>  
                 <div className="info">
-                    <h1 id='login'>Login</h1>
+                    <h1 id='login' onClick={handleLoginClick}>{currentUser ? 'Sair' : 'Login'}</h1>
                     <div className="cart" onClick={openCart}>
                         <span className="cart material-symbols-outlined">shopping_cart</span>
                         <div className="count">0</div>
