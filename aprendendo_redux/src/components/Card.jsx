@@ -4,14 +4,23 @@ import PropTypes from 'prop-types';
 import './Card.css'
 
 import { addProductCart } from '../redux/cart/actions';
+import { addProductMessage, removeMessage } from '../redux/message/actions';
 import {useDispatch} from 'react-redux'
+import { useState } from 'react';
 
 const Card =  ({ name,src }) => {
+
+  const [canClick, setCanClick] = useState(true)
 
   const dispatch = useDispatch()
 
   function handleProductCart (){
-    console.log('eae')
+    setCanClick(false)
+    dispatch(addProductMessage())
+    setTimeout(() => {
+      dispatch(removeMessage())
+      setCanClick(true)
+    }, 3000);
     dispatch(addProductCart(name, src))
   }
 
@@ -35,7 +44,7 @@ const Card =  ({ name,src }) => {
               <span className="star material-symbols-outlined">star</span>
             </div>
           </div>
-          <button onClick={handleProductCart}>Comprar</button>
+          {canClick ? <button onClick={handleProductCart}>Comprar</button> : <button>Comprar</button>}
         </section>
       </div>
     </>

@@ -1,13 +1,26 @@
 
+
 import { useEffect, useState } from 'react'
 
 import './Products.css'
 import Card from '../components/Card'
 
+import Message from '../components/Message.jsx'
+
+import {useSelector} from 'react-redux'
+
+
+        
+
 const Products = () => {
 
-  const [uploads, setUploads] = useState([])
+  // MESSAGE ADD/REMOVE PRODUCT CART
+  const {messageOn, divClass, message} = useSelector(rootReducer => rootReducer.messageReducer)
+  // MESSAGE ADD/REMOVE PRODUCT CART
 
+
+  // GET API REQ
+  const [uploads, setUploads] = useState([])
   useEffect(()=>{
     setTimeout(() => {
       fetch("http://localhost:3000/pictures", {
@@ -18,12 +31,17 @@ const Products = () => {
       })
       .then(data => setUploads(data))
       .catch(err => console.log(err))
-    }, 3000);
+    }, 100);
   }, [])
+  // GET API REQ
+
+
   return (
     <>
     
     <main>
+      {messageOn && <Message divClass={divClass} message={message}/>}
+
       <h1 id='title'>Todos os Produtos</h1>
       <section>
         {(uploads.length >= 1) ? uploads.map((element, index)=>{
