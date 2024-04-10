@@ -1,14 +1,24 @@
 
+import CartActionTypes from "./action-types";
+
 const initialState = {
-    currentCart: []
+    products: [],
+    productsTotalPrice: 0
 }
 
 const cartReducer = (state = initialState, action) => {
-    if (action.type === 'cart/add'){
-        return {...state, currentCart:action.payload}
-    } 
+    switch (action.type){
+        case CartActionTypes.ADD_PRODUCT:
+            return {
+                ...state, 
+                products: [...state.products, action.payload]
+            }
+        case CartActionTypes.REMOVE_PRODUCT:
+            return {}
+    default: 
+        return state
+}
 
-    return state
 }
 
 export default cartReducer;

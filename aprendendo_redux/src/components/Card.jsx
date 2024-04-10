@@ -3,7 +3,17 @@ import PropTypes from 'prop-types';
 
 import './Card.css'
 
+import { addProductCart } from '../redux/cart/actions';
+import {useDispatch} from 'react-redux'
+
 const Card =  ({ name,src }) => {
+
+  const dispatch = useDispatch()
+
+  function handleProductCart (){
+    console.log('eae')
+    dispatch(addProductCart(name, src))
+  }
 
   return (
     
@@ -25,7 +35,7 @@ const Card =  ({ name,src }) => {
               <span className="star material-symbols-outlined">star</span>
             </div>
           </div>
-          <button>Comprar</button>
+          <button onClick={handleProductCart}>Comprar</button>
         </section>
       </div>
     </>

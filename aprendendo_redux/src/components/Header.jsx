@@ -4,7 +4,8 @@ import { useSelector, useDispatch } from 'react-redux'
 
 import './Header.css'
 import Product from '../components/Product.jsx'
-import UserActionTypes from '../redux/user/action-types.js'
+
+import { loginUser, logoutUser } from '../redux/user/actions.js'
 
 
 const Header = () => {
@@ -15,6 +16,8 @@ const Header = () => {
     const [cartMenu, setCartMenu] = useState('close')
 
     const {currentUser} = useSelector(rootReducer => rootReducer.userReducer)
+    const {products} = useSelector(rootReducer => rootReducer.cartReducer)
+
     const dispatch = useDispatch()
 
     function toggleMenu(){
@@ -43,15 +46,10 @@ const Header = () => {
     }
 
     function handleLoginClick(){
-        if (currentUser === null){
-            dispatch({
-                type:UserActionTypes.LOGIN
-            })
-            return
-        }
-        dispatch({
-            type:UserActionTypes.LOGOUT
-        })
+        dispatch(loginUser())
+    }
+    function handleLogoutClick(){
+        dispatch(logoutUser())
     }
 
 
@@ -64,7 +62,7 @@ const Header = () => {
             <div className="navbar">
                 <div className="logo"><a href="/"></a></div>  
                 <div className="info">
-                    <h1 id='login' onClick={handleLoginClick}>{currentUser ? 'Sair' : 'Login'}</h1>
+                    {currentUser ? <div className='login' onClick={handleLogoutClick}>Sair</div> : <div className='login' onClick={handleLoginClick}>Login</div>}
                     <div className="cart" onClick={openCart}>
                         <span className="cart material-symbols-outlined">shopping_cart</span>
                         <div className="count">0</div>
@@ -101,7 +99,11 @@ const Header = () => {
                 <div className={`cartMenu ${cartMenu}`}  onClick={toggleCart}></div>
                 <div className={`cartP ${cart}`}>
                     <h1>Seu Carrinho</h1>
-                    <Product />
+                    {products.map((element, index, key)=>{
+                        const name = element.name
+                        const src = element.src
+                        return <Product name={name} src={src} key={key}/>
+                    })}
                 </div>
             </section>
         </header>
