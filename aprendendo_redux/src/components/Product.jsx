@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux'
 
 import './Product.css'
-import { addProductCart, removeProductCart } from '../redux/cart/actions';
+import { addProductCart, removeAllProducts, removeProductCart } from '../redux/cart/actions';
 
 
 const Product = ({name, src, value, index}) => {
@@ -22,6 +22,9 @@ const Product = ({name, src, value, index}) => {
   function handleRemoveProductCart (){
     dispatch(removeProductCart(index, value))
   }
+  function handleRemoveAllProducts (){
+    dispatch(removeAllProducts(index, value, quantity))
+  }
 
   return (
     <>
@@ -39,7 +42,7 @@ const Product = ({name, src, value, index}) => {
               <span className="less material-symbols-outlined" onClick={handleRemoveProductCart}>remove</span>
             </div>
           </div>
-          <span className="close less material-symbols-outlined">close</span>
+          <span className="close less material-symbols-outlined" onClick={handleRemoveAllProducts}>close</span>
       </div>
     </>
   )

@@ -8,3 +8,8 @@ export const removeProductCart = (index, value) => ({
     type: CartActionTypes.REMOVE_PRODUCT,
     payload: {index, value}
 })
+export const removeAllProducts = (index, value, quantity) => ({
+    type: CartActionTypes.REMOVE_ALL,
+    payload: {index, value},
+    quantity
+})

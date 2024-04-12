@@ -54,7 +54,15 @@ const cartReducer = (state = initialState, action) => {
                 productsTotalPrice: state.productsTotalPrice - action.payload.value,
                 productsCount: state.productsCount - 1
             }
-
+        case CartActionTypes.REMOVE_ALL:
+            return {
+                ...state,
+                products: state.products.filter((product)=>{
+                    return product.index !== action.payload.index
+                }),
+                productsTotalPrice: state.productsTotalPrice - (action.payload.value * action.quantity),
+                productsCount: state.productsCount - action.quantity
+            }
     default: 
         return state
 }
