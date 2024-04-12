@@ -7,6 +7,7 @@ div.product {
     width: 100%;
     height: 202px;
     margin-left: 10px;
+    margin-bottom: 20px;
 
 }
 div.product span{
@@ -23,26 +24,27 @@ div.product img{
     border: 1px solid rgba(87, 87, 87, 0.048);
     border-radius: 10px;
 }
-
-div.infoCart, span.close{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 div.infoCart{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
     width: 30%;
-    padding-left: 10px;
 }
 
 div.simbols{
-    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
 }
-div.simbols *{
-    margin-right: 20px;
+div.simbols p{
+    margin: 0px 15px;
+}
+div.simbols span{
     transition: .2s;
 }
-div.simbols *:hover{
+div.simbols span:hover{
     scale: 1.2;
     transition: .2s;
 }
@@ -66,12 +68,16 @@ div.infoCart h2{
     font-family: 'Inter';
     font-size: .8em;
 }
-div.infoCart p{
+div.infoCart > p{
     width: 100%;
     padding-bottom: 20px;
 }
 
 span.close{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     font-size: 2em;
     width: 10%;
     margin-right: 15px;

@@ -6,5 +6,5 @@ export const addProductCart = (name, src, value, index) => ({
 })
 export const removeProductCart = (index, value) => ({
     type: CartActionTypes.REMOVE_PRODUCT,
-    payload: {index, value, quantity:1}
+    payload: {index, value}
 })
