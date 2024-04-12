@@ -45,8 +45,8 @@ const Products = () => {
       <h1 id='title'>Todos os Produtos</h1>
       <section>
         {(uploads.length >= 1) ? uploads.map((element, index)=>{
-          const {name, src} = element
-          return <Card name={name} src={src} key={index}/>
+          const {name, src, value} = element
+          return <Card name={name} src={src} value={value} index={index} key={index}/>
         }) : <div className='circle'></div>}
       </section>
     </main>

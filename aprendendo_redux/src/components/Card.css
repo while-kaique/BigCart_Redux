@@ -32,6 +32,8 @@
 
 section {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: nowrap;
 }
 
@@ -40,6 +42,7 @@ section .info{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 10px;
     width: 50%;
 }
 
@@ -51,6 +54,12 @@ section#card .info h1{
     color: rgb(58, 58, 58);
     font-family: 'Inter';
 }
+section#card .info h2{
+    text-transform: uppercase;
+    color: rgb(207, 44, 38);
+    font-family: 'Inter';
+    font-size: .8em;
+}
 section#card .info span.star{
     font-size: .8rem;
     color: rgb(255, 196, 0);
@@ -59,6 +68,7 @@ section#card .info span.star{
 /* BUTTON */
 section button{
     width: 40%;
+    height: 40px;
 
     border-radius: 5px;
     border: 0;

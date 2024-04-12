@@ -3,14 +3,14 @@ const Picture = require('../models/picture.js')
 exports.create = async (req, res) => {
     try {
 
-        const {name} = req.body
+        const {name, value} = req.body
 
         const file = req.file.filename
-        console.log(file.path)
 
         const picture = new Picture({
             name,
             src: file,
+            value
         })
 
         await picture.save()

@@ -255,7 +255,7 @@ ul.menu li:hover{
 div.cartP.open{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 10px;
 
     position: fixed;
@@ -266,7 +266,7 @@ div.cartP.open{
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
 
-    width: 30vw;
+    width: 35vw;
     padding-left: 15px;
     height: 100%;
 
@@ -278,10 +278,20 @@ div.cartP.open{
 div.cartP.close{
     display: none;
 }
-div.cartP h1{
+div.cartP > h1{
     padding: 15px;
-    padding-bottom: 50px;
+    padding-bottom: 0px;
     font-family: 'Inter';
     font-size: 1.3em;
     font-weight: 600;
+
+    width: 50%;
+}
+div.cartP > p{
+    font-family: 'Inter';
+    font-size: 1em;
+    font-weight: 400;
+    color: rgb(207, 44, 38);
+    padding: 35px 15px;
+    padding-top: 0;
 }

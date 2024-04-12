@@ -16,7 +16,7 @@ const Header = () => {
     const [cartMenu, setCartMenu] = useState('close')
 
     const {currentUser} = useSelector(rootReducer => rootReducer.userReducer)
-    const {products, productsCount} = useSelector(rootReducer => rootReducer.cartReducer)
+    const {products, productsCount, productsTotalPrice} = useSelector(rootReducer => rootReducer.cartReducer)
 
     const dispatch = useDispatch()
 
@@ -99,10 +99,10 @@ const Header = () => {
                 <div className={`cartMenu ${cartMenu}`}  onClick={toggleCart}></div>
                 <div className={`cartP ${cart}`}>
                     <h1>Seu Carrinho</h1>
-                    {products.map((element, index)=>{
-                        const name = element.name
-                        const src = element.src
-                        return <Product name={name} src={src} key={index}/>
+                    <p>Custo total: R${productsTotalPrice}</p>
+                    {products.map((element, idx)=>{
+                        const {name, src, value, index} = element
+                        return <Product name={name} value={value} src={src} index={index} key={idx}/>
                     })}
                 </div>
             </section>

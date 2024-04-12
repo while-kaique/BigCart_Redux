@@ -1,10 +1,21 @@
 import PropTypes from 'prop-types';
 
+import { useDispatch } from 'react-redux'
+
 import './Product.css'
+import { addProductCart, removeProductCart } from '../redux/cart/actions';
 
 
-const Product = ({name, src}) => {
+const Product = ({name, src, value, index}) => {
+  
+  const dispatch = useDispatch()
 
+  function handleProductCart (){
+    dispatch(addProductCart(name, src, value, index))
+  }
+  function handleRemoveProductCart (){
+    dispatch(removeProductCart(index, value))
+  }
 
   return (
     <>
@@ -15,10 +26,10 @@ const Product = ({name, src}) => {
           <img src={`http://localhost:3000/files/`+src} alt="eae" />
           <div className="infoCart">
             <h1>{name}</h1>
-            <p>preço</p>
+            <h2>{`R$${value}0`}</h2>
             <div className="simbols">
-              <span className="more material-symbols-outlined">add</span>
-              <span className="less material-symbols-outlined">remove</span>
+              <span className="more material-symbols-outlined" onClick={handleProductCart}>add</span>
+              <span className="less material-symbols-outlined" onClick={handleRemoveProductCart}>remove</span>
             </div>
           </div>
           <span className="close less material-symbols-outlined">close</span>
@@ -30,7 +41,9 @@ const Product = ({name, src}) => {
 
 Product.propTypes = {
   name: PropTypes.string.isRequired,
-  src: PropTypes.string.isRequired
+  src: PropTypes.string.isRequired,
+  value: PropTypes.number.isRequired,
+  index: PropTypes.number.isRequired
 };
 
 export default Product

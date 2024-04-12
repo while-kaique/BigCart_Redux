@@ -7,7 +7,7 @@ import { addProductCart } from '../redux/cart/actions';
 import { addProductMessage, canMessage, cantMessage, removeMessage  } from '../redux/message/actions';
 import {useDispatch, useSelector} from 'react-redux';
 
-const Card =  ({ name,src }) => {
+const Card =  ({ name,src, value, index }) => {
 
   const dispatch = useDispatch()
   const {canClick} = useSelector(rootReducer => rootReducer.messageReducer)
@@ -15,7 +15,7 @@ const Card =  ({ name,src }) => {
   function handleProductCart (){
     if (canClick) {
       dispatch(addProductMessage())
-      dispatch(addProductCart(name, src))
+      dispatch(addProductCart(name, src, value, index))
 
       dispatch(cantMessage())
       setTimeout(() => {
@@ -37,6 +37,7 @@ const Card =  ({ name,src }) => {
         <section id='card'>
           <div className="info">
             <h1>{name}</h1>
+            <h2>{`R$${value}0`}</h2>
               <div className="stars">
               <span className="star material-symbols-outlined">star</span>
               <span className="star material-symbols-outlined">star</span>
@@ -54,7 +55,8 @@ const Card =  ({ name,src }) => {
 
 Card.propTypes = {
   name: PropTypes.string.isRequired,
-  src: PropTypes.string.isRequired
-};
-
+  src: PropTypes.string.isRequired,
+  value: PropTypes.number.isRequired,
+  index: PropTypes.number.isRequired
+}
 export default Card
