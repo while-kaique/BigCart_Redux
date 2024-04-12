@@ -4,24 +4,25 @@ import PropTypes from 'prop-types';
 import './Card.css'
 
 import { addProductCart } from '../redux/cart/actions';
-import { addProductMessage, removeMessage } from '../redux/message/actions';
-import {useDispatch} from 'react-redux'
-import { useState } from 'react';
+import { addProductMessage, canMessage, cantMessage, removeMessage  } from '../redux/message/actions';
+import {useDispatch, useSelector} from 'react-redux';
 
 const Card =  ({ name,src }) => {
 
-  const [canClick, setCanClick] = useState(true)
-
   const dispatch = useDispatch()
+  const {canClick} = useSelector(rootReducer => rootReducer.messageReducer)
 
   function handleProductCart (){
-    setCanClick(false)
-    dispatch(addProductMessage())
-    setTimeout(() => {
-      dispatch(removeMessage())
-      setCanClick(true)
-    }, 3000);
-    dispatch(addProductCart(name, src))
+    if (canClick) {
+      dispatch(addProductMessage())
+      dispatch(addProductCart(name, src))
+
+      dispatch(cantMessage())
+      setTimeout(() => {
+        dispatch(removeMessage())
+        dispatch(canMessage())
+      }, 1500);
+    }
   }
 
   return (

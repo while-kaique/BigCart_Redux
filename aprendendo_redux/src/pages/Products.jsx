@@ -15,7 +15,7 @@ import {useSelector} from 'react-redux'
 const Products = () => {
 
   // MESSAGE ADD/REMOVE PRODUCT CART
-  const {messageOn, divClass, message} = useSelector(rootReducer => rootReducer.messageReducer)
+  const {divClass, message} = useSelector(rootReducer => rootReducer.messageReducer)
   // MESSAGE ADD/REMOVE PRODUCT CART
 
 
@@ -40,7 +40,7 @@ const Products = () => {
     <>
     
     <main>
-      {messageOn && <Message divClass={divClass} message={message}/>}
+      <Message divClass={divClass} message={message}/>
 
       <h1 id='title'>Todos os Produtos</h1>
       <section>

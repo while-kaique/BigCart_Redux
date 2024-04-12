@@ -2,7 +2,7 @@
 import messsageActionTypes from "./action-types";
 
 const initialState = {
-    messageOn: false,
+    canClick: true,
     divClass: '',
     message: ''
 }
@@ -12,21 +12,32 @@ const messageReducer = (state = initialState, action) => {
         case messsageActionTypes.ADD_CART_MSG:
             return {
                 ...state,
-                messageOn: true, 
                 divClass: 'add',
                 message: action.payload,
             }
         case messsageActionTypes.REMOVE_CART_MSG:
             return {
                 ...state, 
-                messageOn: true, 
                 divClass: 'remove',
                 message: action.payload,
             }
         case messsageActionTypes.REMOVE_MSG:
             return {
                 ...state, 
-                divClass: 'removing'
+                divClass: 'removeMSG'
+            }
+
+            // MSG ACTIONS
+            // MSG ACTIONS
+        case messsageActionTypes.CANT_MSG:
+            return {
+                ...state,
+                canClick: false
+            }
+        case messsageActionTypes.CAN_MSG:
+            return {
+                ...state,
+                canClick: true
             }
     default: 
         return state
