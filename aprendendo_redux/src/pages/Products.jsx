@@ -14,6 +14,8 @@ import {useSelector} from 'react-redux'
 
 const Products = () => {
 
+  useEffect(()=>{document.title = 'Produtos'},[])
+
   // MESSAGE ADD/REMOVE PRODUCT CART
   const {divClass, message} = useSelector(rootReducer => rootReducer.messageReducer)
   // MESSAGE ADD/REMOVE PRODUCT CART

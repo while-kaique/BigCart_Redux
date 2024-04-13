@@ -18,6 +18,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route element={<App/>}>
           <Route path="/" element={<Products />}/>
           <Route path="/product/:id" element={<Product />}/>
+        </Route> 
+        <Route>
           <Route path="/register" element={<CreateAccount />}/>
         </Route>
       </Routes>

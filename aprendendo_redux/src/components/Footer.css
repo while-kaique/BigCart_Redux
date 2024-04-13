@@ -6,7 +6,7 @@
     0px 0px 6px -6px rgba(0, 0, 0, 0.035),
     0px 0px 48px -6px rgba(0, 0, 0, 0.07);
 
-    padding-top: 30px;
+    padding-top: 10px;
     padding-bottom: 5px;
     width: 100%;
 
@@ -35,17 +35,18 @@
 }
 .footer h1, .footer li{
     color: white;
-    padding: 10px;
+    padding: 8px;
 }
 
 .footer ul h1{
     cursor: default;
     font-family: 'Montserrat';
-    padding-bottom: 25px;
+    padding-bottom: 15px;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 .footer ul li{
+    font-size: 0.9em;
     font-family: 'Montserrat';
     width: 200px;
     margin: auto;
@@ -78,7 +79,7 @@ div#logo{
     color: white;
     font-family: 'Montserrat';
     text-align: center;
-    padding-top: 20px;
+    padding-top: 10px;
     font-size: .9rem;
     cursor: pointer;
 }
