@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
+import {Link} from 'react-router-dom'
 import './CreateAccount.css'
 import Footer from '../components/Footer'
 
 const CreateAccount = () => {
 
   const [canName, setCanName] = useState(true)
-  const [canEmailNum, setCanEmailNum] = useState(true)
+  const [canEmail, setCanEmail] = useState(true)
   const [canPassword, setCanPassword] = useState(true)
   const [canPassword2, setCanPassword2] = useState(true)
 
@@ -18,21 +19,21 @@ const CreateAccount = () => {
       setCanName(false)
       return false
     }
+    console.log('name passou')
+    setCanName(true)
     return true
   }
-  function verifyEmailNum(email){
+  function verifyEmail(email){
     // TESTE DE TIPO (email / número)
-    var isNumber = true;
     if (email.indexOf('@') > -1 && email.indexOf('.com') > -1 && email.length >= 14){
-      isNumber = false
-    } else if (!isNaN(email) && email.length == 8) {
-      isNumber = true
+      setCanEmail(true)
+      console.log('email passou')
+      return true
     } else {
-      setCanEmailNum(false)
+      setCanEmail(false)
       return false;
     }
 
-    return {verify: true, isNumber}
   }
   function verifyPassword(password){
     var rules = [{
@@ -43,8 +44,8 @@ const CreateAccount = () => {
         exp: /^.{6,16}$/
       }];
 
-  var pass = true
-  for (var i = 0; i < rules.length; i++) {
+    var pass = true
+    for (var i = 0; i < rules.length; i++) {
       var rule = rules[i];
       if (!rule.exp.test(password)) {
         setCanPassword(false)
@@ -52,10 +53,16 @@ const CreateAccount = () => {
         break
       }
     }
-  return pass
+    console.log('password1 passou')
+    setCanPassword(true)
+    return pass
   }
+
+
   function verifyPassword2(password,password2){
     if (password === password2){ 
+      setCanPassword2(true)
+      console.log('password2 passou')
       return true
     } else {
       setCanPassword2(false)
@@ -70,24 +77,34 @@ const CreateAccount = () => {
     e.preventDefault()
 
     const name = document.querySelector('#name').value
-    const email = document.querySelector('#emailNum').value
+    const email = document.querySelector('#email').value
     const password = document.querySelector('#password').value
     const password2 = document.querySelector('#password2').value
+    console.log([name, email, password, password2])
 
     const nameStep = verifyName(name)
-
-    const emailNumStep = verifyEmailNum(email)
-
+    const emailStep = verifyEmail(email)
     const passwordStep = verifyPassword(password)
-
     const password2Step = verifyPassword2(password, password2)
 
-    if (nameStep&&emailNumStep.verify&&passwordStep&&password2Step){
-      console.log('opa')
+    console.log(nameStep&&emailStep&&passwordStep&&password2Step)
+
+    var userObj;
+    if (nameStep&&emailStep&&passwordStep&&password2Step){
+
+      userObj = {email, password}
+      
+      fetch('http://localhost:3000/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(userObj)
+      })
+
       setCanPass(true)
     }
-
-  }
+    }
 
   return (
 
@@ -95,8 +112,8 @@ const CreateAccount = () => {
       <div className="logo2"></div>
 
     <form onSubmit={handleSubmit}>
-      <h1>Criar Conta</h1>
-      {!canPass &&
+    {!canPass && <h1>Criar Conta</h1>}
+      {!canPass ?
         <div className="user">
           <div className="camp username">
             <label htmlFor="name">Seu Nome</label>
@@ -104,9 +121,9 @@ const CreateAccount = () => {
             {!canName && <p>Seu nome precisa conter ao menos um caractere!</p>}
           </div>
           <div className="camp email">
-            <label htmlFor="email">Número de Celular ou Email</label>
-            <input type="text" name="emailNum" id="emailNum"/>
-            {!canEmailNum && <p>Adicione um número/email válido!</p>}
+            <label htmlFor="email">Email</label>
+            <input type="text" name="email" id="email"/>
+            {!canEmail && <p>Adicione um email válido!</p>}
           </div>
           <div className="camp password">
             <label htmlFor="password">Senha</label>
@@ -120,6 +137,14 @@ const CreateAccount = () => {
           </div>
 
           <button type='submit' onSubmit={handleSubmit}>Criar Conta</button>
+        </div>
+        :
+        <div className="final">
+          <h1>Conta criada com sucesso!</h1>
+          <p>Faça login para entrar em sua conta agora mesmo.</p>
+          <Link to={'/'}>
+            <p id='back'>Voltar à tela inicial</p>
+          </Link>
         </div>
         }
     </form>

@@ -4,6 +4,7 @@ exports.create = async (req, res) => {
     try {
 
         const {name, value} = req.body
+        console.log(req.body)
 
         const file = req.file.filename
 

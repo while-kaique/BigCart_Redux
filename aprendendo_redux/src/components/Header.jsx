@@ -62,7 +62,12 @@ const Header = () => {
             <div className="navbar">
                 <div className="logo"><a href="/"></a></div>  
                 <div className="info">
-                    {currentUser ? <div className='login' onClick={handleLogoutClick}>Sair</div> : <div className='login' onClick={handleLoginClick}>Login</div>}
+                    {
+                        currentUser ? 
+                        <div className='login' onClick={handleLogoutClick}>Sair</div> :  
+                        <Link to={'/login'}><div className='login' onClick={handleLoginClick}>Login</div></Link>
+                    }
+
                     <div className="cart" onClick={openCart}>
                         <span className="cart material-symbols-outlined">shopping_cart</span>
                         <div className="count">{productsCount}</div>
