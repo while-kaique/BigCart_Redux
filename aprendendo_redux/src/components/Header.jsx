@@ -1,14 +1,15 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 import './Header.css'
 import Product from '../components/Product.jsx'
+import { logoutUser } from '../redux/user/actions.js'
 
-import { loginUser, logoutUser } from '../redux/user/actions.js'
 
 
 const Header = () => {
+    const dispatch = useDispatch()
     const [hamburguer, setHamburguer] = useState('close')
     const [menu, setMenu] = useState('close')
 
@@ -16,9 +17,10 @@ const Header = () => {
     const [cartMenu, setCartMenu] = useState('close')
 
     const {currentUser} = useSelector(rootReducer => rootReducer.userReducer)
+    useEffect(()=>{
+    }, [currentUser])
     const {products, productsCount, productsTotalPrice} = useSelector(rootReducer => rootReducer.cartReducer)
 
-    const dispatch = useDispatch()
 
     function toggleMenu(){
         if (hamburguer === 'close'){
@@ -44,12 +46,10 @@ const Header = () => {
             return
         }
     }
-
-    function handleLoginClick(){
-        dispatch(loginUser())
-    }
     function handleLogoutClick(){
-        dispatch(logoutUser())
+        if (currentUser){
+            dispatch(logoutUser())
+        }
     }
 
 
@@ -64,8 +64,8 @@ const Header = () => {
                 <div className="info">
                     {
                         currentUser ? 
-                        <div className='login' onClick={handleLogoutClick}>Sair</div> :  
-                        <Link to={'/login'}><div className='login' onClick={handleLoginClick}>Login</div></Link>
+                        <div className='login' onClick={handleLogoutClick}>{currentUser}</div> :  
+                        <Link to={'/login'}><div className='login'>Login</div></Link>
                     }
 
                     <div className="cart" onClick={openCart}>

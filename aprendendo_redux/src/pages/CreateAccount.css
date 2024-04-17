@@ -161,3 +161,17 @@ div.final a:hover{
     cursor: pointer;
     background-color: rgb(230, 209, 26);
 }
+.password2 a p.register{
+    color: rgb(0, 78, 134);
+}
+.password2 a p.register:hover{
+    cursor: pointer;
+    color: rgb(0, 42, 71);
+}
+.password2 a p.register{
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: .8em;   
+    padding-top: 5px;
+    text-align: left;
+}

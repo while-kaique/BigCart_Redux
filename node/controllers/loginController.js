@@ -3,10 +3,11 @@ const Login = require('../models/login.js')
 exports.create = async (req, res) => {
     try {
 
-        const {email, password} = req.body
+        const {name, email, password} = req.body
         console.log(req.body)
 
         const loginUser = new Login({
+            name,
             email,
             password
         })

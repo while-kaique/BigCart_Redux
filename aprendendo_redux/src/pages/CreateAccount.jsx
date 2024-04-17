@@ -54,7 +54,6 @@ const CreateAccount = () => {
       }
     }
     console.log('password1 passou')
-    setCanPassword(true)
     return pass
   }
 
@@ -66,6 +65,7 @@ const CreateAccount = () => {
       return true
     } else {
       setCanPassword2(false)
+      console.log(canPassword2)
       return false
     }
   }
@@ -92,7 +92,7 @@ const CreateAccount = () => {
     var userObj;
     if (nameStep&&emailStep&&passwordStep&&password2Step){
 
-      userObj = {email, password}
+      userObj = {name, email, password}
       
       fetch('http://localhost:3000/login', {
         method: 'POST',
@@ -134,6 +134,10 @@ const CreateAccount = () => {
             <label htmlFor="password">Insira a senha mais uma vez</label>
             <input type="password" name="password2" id="password2"/>
             {!canPassword2 && <p>Sua senha deve idêntica a anterior!</p>}
+            
+            <Link to="/login">
+              <p className='register'>Já possuo uma conta na BigCart</p>
+            </Link>
           </div>
 
           <button type='submit' onSubmit={handleSubmit}>Criar Conta</button>

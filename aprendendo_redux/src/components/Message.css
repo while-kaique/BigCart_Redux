@@ -5,7 +5,7 @@
         opacity: 0;
     }
     100% {
-        top: 80px;
+        top: 60px;
         opacity: 1;
     }
     
@@ -13,7 +13,7 @@
 @keyframes messageRemoveMSG {
     0%{
         opacity: 1;
-        top: 80px;
+        top: 60px;
     }
     60%{
         opacity: 0;
@@ -30,11 +30,11 @@ div.message {
     justify-content: center;
     
     transform: translate(-50%, -50%);
-    width: 400px;
-    height: 100px;
+    width: 450px;
+    height: 60px;
     position: fixed;
-    background-color: rgba(96, 206, 52, 0.877);
-    border: 1px solid rgba(81, 177, 43, 0.877);
+    background-color: rgba(96, 206, 52, 0.507);
+    border: 1px solid rgba(81, 177, 43, 0.507);
     border-radius: 15px;
     left: 50%;
     color: black;
