@@ -1,9 +1,9 @@
 const express = require('express')
 const router = express.Router()
 
-const upload = require('../config/multer')
+const upload = require('../config/multer.js')
 
-const PictureController = require('../controllers/PictureController')
+const PictureController = require('../controllers/PictureController.js')
 
 router.post('/', upload.single("file"), PictureController.create)
 router.get('/', PictureController.findAll)

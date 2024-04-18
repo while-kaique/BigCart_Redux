@@ -17,6 +17,6 @@ app.use('/files/', express.static('uploads'))
 
 app.use('/login', loginRouter)
 
-app.listen(process.env.PORT, ()=>{
+app.listen(process.env.PORT, '0.0.0.0', ()=>{
     console.log(`Servidor rodando em http://localhost:${process.env.PORT}`)
 })
