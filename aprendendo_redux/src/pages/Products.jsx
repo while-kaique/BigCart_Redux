@@ -2,10 +2,12 @@
 
 import { useEffect, useState } from 'react'
 
-import './Products.css'
 import Card from '../components/Card'
 
 import Message from '../components/Message.jsx'
+
+import './styles_pages/Products.css'
+import './media_queries_pages/Products.css'
 
 import {useSelector} from 'react-redux'
 
@@ -48,6 +50,7 @@ const Products = () => {
       <section>
         {(uploads.length >= 1) ? uploads.map((element, index)=>{
           const {name, src, value} = element
+          console.log('passou aqui')
           return <Card name={name} src={src} value={value} index={index} key={index}/>
         }) : <div className='circle'></div>}
       </section>

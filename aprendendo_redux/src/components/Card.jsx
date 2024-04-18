@@ -1,7 +1,8 @@
 
 import PropTypes from 'prop-types';
 
-import './Card.css'
+import './styles_components/Card.css'
+import './media_queries_components/Card.css'
 
 import { addProductCart } from '../redux/cart/actions';
 import { addProductMessage, canMessage, cantMessage, removeMessage  } from '../redux/message/actions';

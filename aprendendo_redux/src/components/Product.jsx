@@ -2,7 +2,9 @@ import PropTypes from 'prop-types';
 
 import { useDispatch, useSelector } from 'react-redux'
 
-import './Product.css'
+import './styles_components/Product.css'
+import './media_queries_components/Product.css'
+
 import { addProductCart, removeAllProducts, removeProductCart } from '../redux/cart/actions';
 
 

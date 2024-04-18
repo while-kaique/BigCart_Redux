@@ -1,5 +1,6 @@
 
-import './Login.css'
+import './styles_pages/Login.css'
+import './media_queries_pages/Login.css'
 
 import {Link, Navigate} from 'react-router-dom'
 import { useEffect, useState } from 'react'

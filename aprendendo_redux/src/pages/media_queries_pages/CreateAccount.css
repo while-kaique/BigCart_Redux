@@ -1,0 +1,179 @@
+@charset "UFC-8";
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@media screen and (min-width: 768px) {
+
+    div.ctAcc > div.logo2{
+        width: 160px;
+        height: 115px;
+        margin: 15px auto;
+
+        background-image: url('/images/logo2.png');
+        background-repeat:  no-repeat;
+        background-position: center center;
+        background-size: contain;
+    }
+
+    form {
+        width: 30vw;
+        height: 80vh;
+        border: 1px solid rgba(99, 99, 99, 0.274);
+        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.137);
+        border-radius: 10px;
+        margin: 30px auto;
+    }
+
+    form h1{
+        justify-self: start;
+
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 1.8em;
+        font-weight: 400;
+        
+        padding: 15px;
+    }
+
+    form div.user{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 100%;
+        height: 78%;
+
+        bottom: 0;
+    }
+
+    div.user button{
+
+        width: 90%;
+        height: 35px;
+        margin-left: 0px !important;
+
+        background-color: rgb(247, 225, 28);
+
+        border: 0;
+        border-radius: 10px;
+
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 500;
+        font-size: .9em;
+        
+    }
+    form button:hover{
+        cursor: pointer;
+        background-color: rgb(230, 209, 26);
+    }
+    div.user .camp{
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+    }
+    .camp label{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 600;
+        font-size: .9em;
+
+        width: 100%;
+        padding-bottom: 5px;
+    }
+    .camp input{
+        padding-left: 10px;
+        width: 100%;
+        margin: auto;
+        height: 30px;
+        border-radius: 3px;
+        border: 1px solid rgba(7, 7, 7, 0.397);
+        box-shadow: 0 1px 0 rgba(255,255,255,.5), 0 1px 0 rgba(0,0,0,.07) inset;
+    }
+    .camp input:focus{
+        outline: none;
+        box-shadow: 0px 0px 5px rgba(0, 225, 255, 0.705);
+        background-color: rgba(0, 225, 255, 0.041);
+    }
+    .camp p{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: red;
+        font-size: .7em;
+        font-weight: 700;
+    }
+
+
+    div.final {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;    
+        
+
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+    }
+    div.final h1, p{
+        text-align: center;
+    }
+    div.final h1{
+        text-transform: uppercase;
+        font-family: 'Inter';
+        font-weight: 600;
+        color: #383838;
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
+    div.final > p{
+        font-family: 'Inter';
+        margin-bottom: 200px;
+        width: 80%;
+    }
+    div.final a{
+        position: absolute;
+        text-decoration: none;
+        width: 90%;
+        height: 35px;
+        margin-left: 0px !important;
+
+        background-color: rgb(247, 225, 28);
+
+        border: 0;
+        border-radius: 10px;
+        bottom: 45px;
+
+    }
+    div.final a p#back{
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        color: black;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 500;
+        font-size: .9em;    
+        text-align: center;
+        
+    }
+    div.final a:hover{
+        cursor: pointer;
+        background-color: rgb(230, 209, 26);
+    }
+    .password2 a p.register{
+        color: rgb(0, 78, 134);
+    }
+    .password2 a p.register:hover{
+        cursor: pointer;
+        color: rgb(0, 42, 71);
+    }
+    .password2 a p.register{
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: .8em;   
+        padding-top: 5px;
+        text-align: left;
+    }
+
+}

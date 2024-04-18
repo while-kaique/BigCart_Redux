@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react'
 import {Link} from 'react-router-dom'
-import './CreateAccount.css'
+
+import './styles_pages/CreateAccount.css'
+import './media_queries_pages/CreateAccount.css'
+
 import Footer from '../components/Footer'
 
 const CreateAccount = () => {
@@ -146,7 +149,7 @@ const CreateAccount = () => {
         <div className="final">
           <h1>Conta criada com sucesso!</h1>
           <p>Faça login para entrar em sua conta agora mesmo.</p>
-          <Link to={'/'}>
+          <Link to={'/'} >
             <p id='back'>Voltar à tela inicial</p>
           </Link>
         </div>

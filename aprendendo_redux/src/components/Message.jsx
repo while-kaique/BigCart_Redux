@@ -1,7 +1,7 @@
 
 import PropTypes from 'prop-types';
 
-import './Message.css'
+import './styles_components/Message.css'
 
 const Message = ({divClass, message}) => {
   return (

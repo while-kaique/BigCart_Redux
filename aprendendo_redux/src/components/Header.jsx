@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 
-import './Header.css'
+import './styles_components/Header.css'
+import './media_queries_components/Header.css'
 import Product from '../components/Product.jsx'
 import { logoutUser } from '../redux/user/actions.js'
 

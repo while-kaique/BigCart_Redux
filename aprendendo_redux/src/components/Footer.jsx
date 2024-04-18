@@ -1,4 +1,7 @@
-import '../components/Footer.css'
+
+import './styles_components/Footer.css'
+import './media_queries_components/Footer.css'
+
 const Footer = () => {
   return (
     <div className='foot'>
@@ -25,21 +28,21 @@ const Footer = () => {
             
             <ul id="ul2">
                 <h1>Links Úteis</h1>
-                <a href="https://github.com/while-kaique">
+                <a target="_blank" href="https://github.com/while-kaique">
                     <li>Github</li>
                 </a>
-                <a href="https://www.linkedin.com/in/kaique-breno/">
+                <a target="_blank" href="https://www.linkedin.com/in/kaique-breno/">
                     <li>LinkedIn</li>
                 </a>
-                <a href="whilekaique@alu.ufc.br">
+                <a target="_blank" href="whilekaique@alu.ufc.br">
                     <li>Email</li>
                 </a>
-                <a href="https://w.app/KaiCode">
+                <a target="_blank" href="https://w.app/KaiCode">
                     <li>Whatsapp</li>
                 </a>
             </ul>
         </footer>
-        <a href="https://w.app/KaiCode">
+        <a target="_blank" href="https://w.app/KaiCode">
             <p>Este site lhe gerou interesse? Entre em contato usando uma das formas descritas acima!</p>
         </a>
     </div>
