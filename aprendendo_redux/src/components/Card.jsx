@@ -33,7 +33,7 @@ const Card =  ({ name,src, value, index }) => {
 
       <div className="card">
         <div className="image">
-          <img src={`http://localhost:3000/files/`+src} alt="nãosei" />
+          <img src={`https://bigcart-ecommerce-8952.onrender.com/files/`+src} alt="nãosei" />
         </div>
         <section id='card'>
           <div className="info">
