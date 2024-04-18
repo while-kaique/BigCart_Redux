@@ -31,6 +31,8 @@ const Products = () => {
         method: 'GET'
       })
       .then((res) => {
+        console.log(res)
+        console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
         return res.json()
       })
       .then(data => setUploads(data))
