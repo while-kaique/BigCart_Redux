@@ -70,7 +70,7 @@ const Header = () => {
                     }
 
                     <div className="cart" onClick={openCart}>
-                        <span className="cart material-symbols-outlined">shopping_cart</span>
+                        <span className="cart material-symbols-outlined notranslate">shopping_cart</span>
                         <div className="count">{productsCount}</div>
                         <p>Carrinho</p>
                     </div>

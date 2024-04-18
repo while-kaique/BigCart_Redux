@@ -40,11 +40,11 @@ const Card =  ({ name,src, value, index }) => {
             <h1>{name}</h1>
             <h2>{`R$${value}0`}</h2>
               <div className="stars">
-              <span className="star material-symbols-outlined">star</span>
-              <span className="star material-symbols-outlined">star</span>
-              <span className="star material-symbols-outlined">star</span>
-              <span className="star material-symbols-outlined">star</span>
-              <span className="star material-symbols-outlined">star</span>
+              <span className="star material-symbols-outlined notranslate">star</span>
+              <span className="star material-symbols-outlined notranslate">star</span>
+              <span className="star material-symbols-outlined notranslate">star</span>
+              <span className="star material-symbols-outlined notranslate">star</span>
+              <span className="star material-symbols-outlined notranslate">star</span>
             </div>
           </div>
           {canClick ? <button onClick={handleProductCart}>Comprar</button> : <button>Comprar</button>}

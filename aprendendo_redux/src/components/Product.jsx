@@ -39,12 +39,12 @@ const Product = ({name, src, value, index}) => {
             <h1>{name}</h1>
             <h2>{`R$${value}0`}</h2>
             <div className="simbols">
-              <span className="more material-symbols-outlined" onClick={handleProductCart}>add</span>
+              <span className="more material-symbols-outlined notranslate" onClick={handleProductCart}>add</span>
               <p>{quantity}</p>
-              <span className="less material-symbols-outlined" onClick={handleRemoveProductCart}>remove</span>
+              <span className="less material-symbols-outlined notranslate" onClick={handleRemoveProductCart}>remove</span>
             </div>
           </div>
-          <span className="close less material-symbols-outlined" onClick={handleRemoveAllProducts}>close</span>
+          <span className="close less material-symbols-outlined notranslate" onClick={handleRemoveAllProducts}>close</span>
       </div>
     </>
   )
