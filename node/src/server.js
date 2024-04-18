@@ -1,8 +1,8 @@
 require('dotenv').config({path:'variaveis.env'})
 require('./db')
 
-const pictureRouter = require('../routes/picture')
-const loginRouter = require('../routes/account')
+const pictureRouter = require('../routes/picture.js')
+const loginRouter = require('../routes/account.js')
 
 const express= require('express')
 const cors = require('cors')
