@@ -250,7 +250,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        width: 80vw;
+        width: 59vw;
         height: 100vh;
         background-color: #131313a2;
     }
@@ -272,7 +272,7 @@
         border-top-left-radius: 3px;
         border-bottom-left-radius: 3px;
     
-        width: 35vw;
+        width: 45vw;
         padding-left: 15px;
         height: 100%;
     
