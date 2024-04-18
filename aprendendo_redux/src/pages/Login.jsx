@@ -64,7 +64,9 @@ const Login = () => {
     <Provider store={store}>
     <>
       <div className='ctAcc'>
-      <div className="logo2"></div>
+      <Link to={'/'}>
+        <div className="logo2"></div>
+      </Link>
 
       <form onSubmit={handleSubmit} id='login'>
       <h1>Login</h1>

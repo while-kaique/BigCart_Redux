@@ -112,7 +112,9 @@ const CreateAccount = () => {
   return (
 
     <div className='ctAcc'>
-      <div className="logo2"></div>
+      <Link to={'/'}>
+        <div className="logo2"></div>
+      </Link>
 
     <form onSubmit={handleSubmit}>
     {!canPass && <h1>Criar Conta</h1>}
