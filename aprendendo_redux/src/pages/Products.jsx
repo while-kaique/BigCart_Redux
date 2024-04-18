@@ -27,7 +27,7 @@ const Products = () => {
   const [uploads, setUploads] = useState([])
   useEffect(()=>{
     setTimeout(() => {
-      fetch("https://bigcart-ecommerce-8952.onrender.com/pictures", {
+      fetch("http://bigcart-ecommerce-8952.onrender.com/pictures", {
         method: 'GET'
       })
       .then((res) => {
