@@ -34,7 +34,7 @@ const Product = ({name, src, value, index}) => {
 
 
       <div className="product">
-          <img src={`http://localhost:3000/files/`+src} alt="eae" />
+          <img src={`https://bigcart-ecommerce-8952.onrender.com/files/`+src} alt="eae" />
           <div className="infoCart">
             <h1>{name}</h1>
             <h2>{`R$${value}0`}</h2>
