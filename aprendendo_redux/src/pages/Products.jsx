@@ -31,11 +31,14 @@ const Products = () => {
         method: 'GET'
       })
       .then((res) => {
-        console.log(res)
-        console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
         return res.json()
       })
-      .then(data => setUploads(data))
+      .then((data) => {
+        
+        console.log(data)
+        console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
+        return setUploads(data)
+      })
       .catch(err => console.log(err))
     }, 100);
   }, [])
