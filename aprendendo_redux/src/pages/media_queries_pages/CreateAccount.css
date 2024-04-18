@@ -3,7 +3,7 @@
 
 @media screen and (min-width: 768px) {
 
-    div.ctAcc > div.logo2{
+    div.ctAcc > a > div.logo2{
         width: 160px;
         height: 115px;
         margin: 15px auto;

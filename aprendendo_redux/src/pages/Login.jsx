@@ -64,7 +64,7 @@ const Login = () => {
     <Provider store={store}>
     <>
       <div className='ctAcc'>
-      <Link to={'/'}>
+      <Link className='logo2' to={'/'}>
         <div className="logo2"></div>
       </Link>
 

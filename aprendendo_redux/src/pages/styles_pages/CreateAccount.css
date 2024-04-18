@@ -4,7 +4,7 @@
 
 
 @media screen and (max-width: 768px) {
-    div.ctAcc > div.logo2{
+    div.ctAcc > a > div.logo2{
         width: 175px;
         height: 150px;
         margin: 0px auto;
@@ -13,7 +13,7 @@
         background-repeat:  no-repeat;
         background-position: center center;
         background-size: contain;
-        
+
         scale: 0.8;
     }
     
