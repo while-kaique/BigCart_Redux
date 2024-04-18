@@ -26,7 +26,7 @@ const Login = () => {
   const [error, setError] = useState(false)
 
   useEffect(()=>{
-    fetch('http://localhost:3000/login',{
+    fetch('https://bigcart-ecommerce-8952.onrender.com/login',{
       method: 'GET',
       headers: {'Content-Type': 'application/json'}
     })

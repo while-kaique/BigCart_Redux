@@ -97,7 +97,7 @@ const CreateAccount = () => {
 
       userObj = {name, email, password}
       
-      fetch('http://localhost:3000/login', {
+      fetch('https://bigcart-ecommerce-8952.onrender.com/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
