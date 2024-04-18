@@ -63,6 +63,7 @@
     }
     section#card .info span.star{
         font-size: .8rem;
+        fill: 1;
         color: rgb(255, 196, 0);
     }
     

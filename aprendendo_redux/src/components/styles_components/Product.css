@@ -10,7 +10,8 @@
         height: 202px;
         margin-left: 10px;
         margin-bottom: 20px;
-    
+        
+        scale: .8;
     }
     div.product span{
         cursor: pointer;
