@@ -41,41 +41,8 @@ Na página Cadastro podemos criar/cadastrar um novo usuário no Banco de Dados M
 - Front end: Vercel
 - Banco de dados: MongoDB
 
-# Como executar o projeto
-
-## Back end
-Pré-requisitos: Java 11
-
-```bash
-# clonar repositório
-git clone https://github.com/devsuperior/sds1-wmazoni
-
-# entrar na pasta do projeto back end
-cd backend
-
-# executar o projeto
-./mvnw spring-boot:run
-```
-
-## Front end web
-Pré-requisitos: npm / yarn
-
-```bash
-# clonar repositório
-git clone https://github.com/devsuperior/sds1-wmazoni
-
-# entrar na pasta do projeto front end web
-cd front-web
-
-# instalar dependências
-yarn install
-
-# executar o projeto
-yarn start
-```
-
 # Autor
 
-Wellington Mazoni de Andrade
+Kaique Breno Gerônimo Medeiros
 
-https://www.linkedin.com/in/wmazoni
+https://www.linkedin.com/in/kaique-breno
