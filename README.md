@@ -10,15 +10,15 @@
 
 Big Cart é um E-commerce full stack web e mobile construída para reforçar as habilidades em Redux e React de forma totalmente responsiva e dinâmica.
 
+## Layout Home
 Logo na página Home podemos acessar a lista dos produtos (com requisição via API) e adicioná-los ao carrinho usando Redux para que as mudanças no Carrinho, na quantidade de produtos totais, individuais, e no preço total sejam alterados instantaneamente.
 
-## Layout Home
 ![Home Page](https://github.com/while-kaique/BigCart_Redux/assets/123902283/8b2f0b3e-6228-4893-8310-9addba9e6939)
 
-## Layout web
-![Web 1](https://github.com/acenelio/assets/raw/main/sds1/web1.png)
 
-![Web 2](https://github.com/acenelio/assets/raw/main/sds1/web2.png)
+## Layout Login
+Já página Login, podemos acessar a conta previamente cadastrada do usuário (API Nodejs com MongoDB) e retornar à página Home com o botão "Login" subsituído pelo nome da conta cadastrada.
+![Login Page](https://github.com/while-kaique/BigCart_Redux/assets/123902283/c01de920-eb58-4479-ba89-ae4e57fb0d42)
 
 ## Modelo conceitual
 ![Modelo Conceitual](https://github.com/acenelio/assets/raw/main/sds1/modelo-conceitual.png)
