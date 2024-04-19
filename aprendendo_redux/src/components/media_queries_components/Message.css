@@ -1,26 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-@media screen and (max-width: 1230px) {
+@media screen and (min-width: 1230px) {
     @keyframes messageAdd {
-        20%{
+        40%{
             opacity: 0;
         }
         100% {
-            top: 120px;
-            opacity: .9;
+            top: 60px;
+            opacity: 1;
         }
         
     }
     @keyframes messageRemoveMSG {
         0%{
             opacity: 1;
-            top: 90px;
+            top: 60px;
         }
         60%{
             opacity: 0;
         }
         100% {
-            top: -90px;
+            top: -80px;
         }
         
     }
@@ -30,15 +30,15 @@
         justify-content: center;
         
         transform: translate(-50%, -50%);
-        width: 300px;
-        height: 50px;
+        width: 450px;
+        height: 60px;
         position: fixed;
         background-color: rgba(96, 206, 52, 0.507);
         border: 1px solid rgba(81, 177, 43, 0.507);
-        border-radius: 10px;
-        left: 50vw;
+        border-radius: 15px;
+        left: 50%;
         color: black;
-        top: -90px;
+        top: -250px;
         opacity: 0;
     
         z-index: 999;
@@ -47,7 +47,7 @@
         text-align: center;
         font-family: 'Inter';
         font-weight: 300;
-        font-size: 1em;
+        font-size: 1.2em;
     
     }
     div.message.add {

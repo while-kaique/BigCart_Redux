@@ -2,6 +2,7 @@
 import PropTypes from 'prop-types';
 
 import './styles_components/Message.css'
+import './media_queries_components/Message.css'
 
 const Message = ({divClass, message}) => {
   return (

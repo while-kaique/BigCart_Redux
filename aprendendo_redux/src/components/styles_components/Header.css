@@ -273,7 +273,6 @@
         border-bottom-left-radius: 3px;
     
         width: 75vw;
-        padding-left: 15px;
         height: 100%;
     
         overflow: auto;
@@ -298,7 +297,7 @@
         font-size: 1em;
         font-weight: 400;
         color: rgb(207, 44, 38);
-        padding: 35px 15px;
+        padding: 0px 15px 10px;
         padding-top: 0;
     }
 }
