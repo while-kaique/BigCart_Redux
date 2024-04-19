@@ -4,13 +4,13 @@
  # Big Cart
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/devsuperior/sds1-wmazoni/blob/master/LICENSE) 
 
-# Sobre o projeto
+# Deploy do Projeto
 
-https://wmazoni-sds1.netlify.app
+[https://wmazoni-sds1.netlify.app](https://bigcartredux-git-main-while-kaiques-projects.vercel.app)
 
-Big Game Survey é uma aplicação full stack web e mobile construída durante a 1ª edição da **Semana DevSuperior** (#sds1), evento organizado pela [DevSuperior](https://devsuperior.com "Site da DevSuperior").
+Big Cart é um Ecommerce full stack web e mobile construída para reforçar as habilidades em Redux e React.
 
-A aplicação consiste em uma pesquisa de preferência de games, onde os dados são coletados no app mobile, e depois são listados no app web, que também apresenta um dashboard com gráficos baseados nestes dados.
+Logo na página Home podemos acessar a lista dos produtos (com requisição via API) e adicioná-los ao carrinho usando Redux para que as mudanças no Carrinho, na quantidade de produtos totais, individuais, e no preço total sejam alterados instantaneamente.
 
 ## Layout mobile
 ![Mobile 1](https://github.com/acenelio/assets/raw/main/sds1/mobile1.png) ![Mobile 2](https://github.com/acenelio/assets/raw/main/sds1/mobile2.png)
