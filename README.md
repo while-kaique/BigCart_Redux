@@ -33,12 +33,12 @@ Na página Cadastro podemos criar/cadastrar um novo usuário no Banco de Dados M
 - Multer
 - MongoDB
 ## Front end
-- HTML / CSS / JS / JavaScript
+- HTML / CSS / JavaScript
 - ReactJS
 - Redux
 ## Implantação em produção
 - Back end: Render
-- Front end web: Vercel
+- Front end: Vercel
 - Banco de dados: MongoDB
 
 # Como executar o projeto
