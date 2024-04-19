@@ -44,6 +44,9 @@
         padding-bottom: 15px;
         font-weight: 700;
         font-size: 1.4rem;
+
+        width: 150px;
+        height: 30px;
     }
     .footer ul li{
         font-size: 0.7em;
@@ -84,6 +87,7 @@
         text-align: center;
         padding-top: 10px;
         font-size: .55rem;
+        font-weight: 500;
         cursor: pointer;
         transition: .4s;
     }
