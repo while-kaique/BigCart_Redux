@@ -8,12 +8,12 @@
 
 [https://wmazoni-sds1.netlify.app](https://bigcartredux-git-main-while-kaiques-projects.vercel.app)
 
-Big Cart é um Ecommerce full stack web e mobile construída para reforçar as habilidades em Redux e React.
+Big Cart é um E-commerce full stack web e mobile construída para reforçar as habilidades em Redux e React de forma totalmente responsiva e dinâmica.
 
 Logo na página Home podemos acessar a lista dos produtos (com requisição via API) e adicioná-los ao carrinho usando Redux para que as mudanças no Carrinho, na quantidade de produtos totais, individuais, e no preço total sejam alterados instantaneamente.
 
-## Layout mobile
-![Mobile 1](https://github.com/acenelio/assets/raw/main/sds1/mobile1.png) ![Mobile 2](https://github.com/acenelio/assets/raw/main/sds1/mobile2.png)
+## Layout Home
+![Home Page](https://github.com/while-kaique/BigCart_Redux/assets/123902283/8b2f0b3e-6228-4893-8310-9addba9e6939)
 
 ## Layout web
 ![Web 1](https://github.com/acenelio/assets/raw/main/sds1/web1.png)
