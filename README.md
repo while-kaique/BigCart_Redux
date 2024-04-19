@@ -17,28 +17,29 @@ Logo na página Home podemos acessar a lista dos produtos (com requisição via 
 
 
 ## Layout Login
-Já página Login, podemos acessar a conta previamente cadastrada do usuário (API Nodejs com MongoDB) e retornar à página Home com o botão "Login" subsituído pelo nome da conta cadastrada.
+Já página Login, podemos acessar a conta previamente cadastrada do usuário (API Node.js com MongoDB) e retornar à página Home com o botão "Login" subsituído pelo nome da conta cadastrada.
+
 ![Login Page](https://github.com/while-kaique/BigCart_Redux/assets/123902283/c01de920-eb58-4479-ba89-ae4e57fb0d42)
 
-## Modelo conceitual
-![Modelo Conceitual](https://github.com/acenelio/assets/raw/main/sds1/modelo-conceitual.png)
+## Layout Cadastro
+Na página Cadastro podemos criar/cadastrar uma novo usuário no Banco de Dados MongoDB via backend em Node.js, o cadastro é apenas provisório e não possui métodos eficazes/seguros de cadastro ou um sistema complexo e sólido de validação, é importante ressaltar que estou em constante aprendizado e esse projeto serviu para exercitar o Redux (Front End). Em breve farei um verdadeiro sistema de cadastro!
+
+![Register Page](https://github.com/while-kaique/BigCart_Redux/assets/123902283/12c416bc-3a91-4dc3-9b89-6efa5d82ae55)
 
 # Tecnologias utilizadas
 ## Back end
-- Java
-- Spring Boot
-- JPA / Hibernate
-- Maven
+- Node.js
+- Express
+- Multer
+- MongoDB
 ## Front end
-- HTML / CSS / JS / TypeScript
+- HTML / CSS / JS / JavaScript
 - ReactJS
-- React Native
-- Apex Charts
-- Expo
+- Redux
 ## Implantação em produção
-- Back end: Heroku
-- Front end web: Netlify
-- Banco de dados: Postgresql
+- Back end: Render
+- Front end web: Vercel
+- Banco de dados: MongoDB
 
 # Como executar o projeto
 
