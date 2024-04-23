@@ -22,26 +22,7 @@
         text-transform: uppercase;
         text-align: center;
     
-        padding-top: 20px;
-    }
-    
-    main h1#title::before{
-        margin: 15px auto;
-        
-        bottom: 0;
-        content: '';
-        width: 350px;
-        border: 3px solid rgba(75, 75, 75, 0.158);
-        border-radius: 5px;
-    }
-    main h1#title::after{
-        margin: 15px auto;
-        
-        bottom: 0;
-        content: '';
-        width: 350px;
-        border: 3px solid rgba(75, 75, 75, 0.158);
-        border-radius: 5px;
+        padding: 40px 0px;
     }
     main section{
         display: flex;

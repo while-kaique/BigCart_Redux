@@ -9,7 +9,7 @@
 
 @media screen and (min-width: 768px) {
     main {
-        padding-top: 110px;
+        padding-top: 80px;
     }
     main h1#title{
         display: flex;
@@ -24,25 +24,6 @@
         padding-top: 60px;
     }
     
-    main h1#title::before{
-        margin: 15px auto;
-        
-        bottom: 0;
-        content: '';
-        width: 550px;
-        border: 3px solid rgba(75, 75, 75, 0.158);
-        border-radius: 5px;
-    }
-    main h1#title::after{
-        content: '';
-
-        margin: 15px auto;
-        
-        bottom: 0;
-        width: 550px;
-        border: 3px solid rgba(75, 75, 75, 0.158);
-        border-radius: 5px;
-    }
     main section{
         display: flex;
         flex-wrap: wrap;
@@ -50,7 +31,7 @@
     
         width: 100%;
     
-        color: black;
+        color: rgb(58, 58, 58);
     }
     
     .circle {

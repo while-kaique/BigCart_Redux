@@ -57,12 +57,12 @@ const Header = () => {
   return (
     
     <>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 
         <header>
             <div className="navbar">
                 <div className="logo"><a href="/"></a></div>  
-                <div className="info">
+                <div className="info header">
                     {
                         currentUser ? 
                         <div className='login' onClick={handleLogoutClick}>{currentUser}</div> :  
@@ -72,7 +72,6 @@ const Header = () => {
                     <div className="cart" onClick={openCart}>
                         <span className="cart material-symbols-outlined notranslate">shopping_cart</span>
                         <div className="count">{productsCount}</div>
-                        <p>Carrinho</p>
                     </div>
                     <div className={`hamburguer ${hamburguer}`} onClick={toggleMenu}>
                         <div className={`bar1`}></div>

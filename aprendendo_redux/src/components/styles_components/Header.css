@@ -72,8 +72,9 @@
         align-items: center;
     }
     .info div.login{
+        width: 53px;
         font-size: 1.2em;
-        margin-right: 50px;
+        margin-right: 30px;
         font-weight: 500;
         color: white;
         cursor: pointer;
@@ -87,7 +88,7 @@
         flex-direction: column;
         flex-wrap: wrap;
         height: 50px;
-        margin-right: 21px;
+        margin-right: 20px;
     }
     
     div.cart span.cart{

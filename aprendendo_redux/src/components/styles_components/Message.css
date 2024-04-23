@@ -2,59 +2,70 @@
 
 @media screen and (max-width: 1230px) {
     @keyframes messageAdd {
-        20%{
+        40%{
             opacity: 0;
         }
         100% {
-            top: 120px;
-            opacity: .9;
+            left: 75px;
+            opacity: 1;
         }
         
     }
     @keyframes messageRemoveMSG {
         0%{
             opacity: 1;
-            top: 90px;
+            left: 75px;
         }
         60%{
             opacity: 0;
         }
         100% {
-            top: -90px;
+            left: -150px;
         }
         
     }
     div.message {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
+        align-items: center;
         
         transform: translate(-50%, -50%);
-        width: 300px;
+        width: 150px;
         height: 50px;
         position: fixed;
-        background-color: rgba(96, 206, 52, 0.507);
-        border: 1px solid rgba(81, 177, 43, 0.507);
-        border-radius: 10px;
-        left: 50vw;
+        background-color: rgb(167, 241, 144);
+        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.308);
+        border-radius: 6px;
+        left: -150px;
+        top: 150px;
         color: black;
-        top: -90px;
         opacity: 0;
+        padding-left: 50px;
     
         z-index: 999;
+    }
+    div.message::after{
+        content: '';
+        width: 20px;
+        height: 50px;
+        margin-left: 10px;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+        background-color: black;
     }
     div.message p{
         text-align: center;
         font-family: 'Inter';
+        width: 100%;
         font-weight: 300;
-        font-size: 1em;
+        font-size: .8em;
     
     }
     div.message.add {
-        animation: messageAdd .3s forwards ease;
+        animation: messageAdd .6s forwards ease;
     }
     div.message.removeMSG {
-        animation: messageRemoveMSG .3s forwards ease;
+        animation: messageRemoveMSG .6s forwards ease;
     }
     div.message.removeP{
         animation: messageRemove .6s forwards ease;
