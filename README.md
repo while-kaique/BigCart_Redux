@@ -6,7 +6,7 @@
 
 # Deploy do Projeto
 
-[https://wmazoni-sds1.netlify.app](https://bigcartredux-git-main-while-kaiques-projects.vercel.app)
+[https://aprendendo-redux.vercel.app](https://bigcartredux-git-main-while-kaiques-projects.vercel.app)
 
 Big Cart é um E-commerce full stack web e mobile construída para reforçar as habilidades em Redux e React de forma totalmente responsiva e dinâmica.
 
